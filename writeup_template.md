@@ -29,6 +29,8 @@ The goals / steps of this project are the following:
 [image8]: ./examples/placeholder.png "Traffic Sign 5"
 
 [image10]: ./examples/TrafSign_labels.png "TrafSign_labels"
+[image11]: ./examples/count-of-each-sign.png "count-of-each-sign"
+
 
 ## Rubric Points
 ### Here I will consider the [rubric points](https://review.udacity.com/#!/rubrics/481/view) individually and describe how I addressed each point in my implementation.  
@@ -55,9 +57,14 @@ signs data set:
 
 #### 2. Include an exploratory visualization of the dataset.
 
-Here is an exploratory visualization of the data set. It is a bar chart showing how the data ...
+Here is an exploratory visualization of the data set. It is a bar chart showing the traffic sign labels.
 
-![alt text][image10]
+![traffic sign labels][image10]
+
+Here is the count of each sign.
+
+![count of each sign][image11]
+
 
 ### Design and Test a Model Architecture
 
