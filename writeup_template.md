@@ -73,21 +73,15 @@ Here is the count of each sign.
 
 As a first step, I decided to convert the images to grayscale, because in cnn classification task, color infomation doesn't help much in classification, meanwhile edge information usually is more helpful. Convert the images to grayscale will speed things up and any drawbacks could be supplemented with more training data.
 
+I use cv2.cvtColor function to accomplish this convert.
+
 Here is an example of a traffic sign image after grayscaling.
 
 ![alt text][image12]
 
-As a last step, I normalized the image data because ...
+Secondly, I normalized the image data, because after normalization, image data have 0 mean and standard deviations, and the ranges of our distributions of feature values would likely be similar to each feature,  which can also accelerate the training process.
 
-I decided to generate additional data because ... 
-
-To add more data to the the data set, I used the following techniques because ... 
-
-Here is an example of an original image and an augmented image:
-
-![alt text][image3]
-
-The difference between the original data set and the augmented data set is the following ... 
+After normalization, i define the type of image data and image label, which set all the data have proper data type.
 
 
 #### 2. Describe what your final model architecture looks like including model type, layers, layer sizes, connectivity, etc.) Consider including a diagram and/or table describing the final model.
@@ -96,15 +90,27 @@ My final model consisted of the following layers:
 
 | Layer         		|     Description	        					| 
 |:---------------------:|:---------------------------------------------:| 
-| Input         		| 32x32x3 RGB image   							| 
-| Convolution 3x3     	| 1x1 stride, same padding, outputs 32x32x64 	|
+| Input         		| 32x32x1 gray image   							| 
+| Convolution 3x3     	| 1x1 stride, same padding, outputs 32x32x32 	|
 | RELU					|												|
-| Max pooling	      	| 2x2 stride,  outputs 16x16x64 				|
-| Convolution 3x3	    | etc.      									|
-| Fully connected		| etc.        									|
-| Softmax				| etc.        									|
-|						|												|
-|						|												|
+| Convolution 3x3     	| 1x1 stride, same padding, outputs 32x32x32 	|
+| RELU					|												|
+| Max pooling	      	| 2x2 stride,  outputs 16x16x32 				|
+| Convolution 3x3     	| 1x1 stride, same padding, outputs 16x16x64 	|
+| RELU					|		
+| Convolution 3x3     	| 1x1 stride, same padding, outputs 16x16x64 	|
+| RELU					|	
+| Max pooling	      	| 2x2 stride,  outputs 8x8x64 				|
+| Convolution 3x3     	| 1x1 stride, same padding, outputs 8x8x128 	|
+| RELU					|	
+| Convolution 3x3     	| 1x1 stride, same padding, outputs 8x8x128 	|
+| RELU					|	
+| Convolution 3x3     	| 1x1 stride, same padding, outputs 8x8x128 	|
+| RELU					|	
+| Max pooling	      	| 2x2 stride,  outputs 4x4x128 				|
+| Fully connected		| 2048->256        									|
+| RELU					|	
+| Fully connected		| 256->43        									|
  
 
 
