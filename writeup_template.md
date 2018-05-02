@@ -161,14 +161,11 @@ For the first image, the model is relatively sure that this is a stop sign (prob
 
 | Probability         	|     Prediction	        					| 
 |:---------------------:|:---------------------------------------------:| 
-| .60         			| Stop sign   									| 
-| .20     				| U-turn 										|
-| .05					| Yield											|
-| .04	      			| Bumpy Road					 				|
-| .01				    | Slippery Road      							|
-
-
-For the second image ... 
+| 1.00000000e+00         			| Right-of-way at the next intersection   									| 
+| 3.37956635e-10     				| Children crossing 										|
+| 1.36430623e-15					| Speed limit (120km/h)											|
+| 1.18945555e-16	      			| Roundabout mandatory				 				|
+| 2.20503587e-17				    | Dangerous curve to the left     							|
 
 ### (Optional) Visualizing the Neural Network (See Step 4 of the Ipython notebook for more details)
 #### 1. Discuss the visual output of your trained network's feature maps. What characteristics did the neural network use to make classifications?
