@@ -33,6 +33,9 @@ The goals / steps of this project are the following:
 [image12]: ./examples/TrafSign_gray.png "TrafSign_gray.png"
 [image13]: ./examples/5test-images.png "5test-images.png"
 [image14]: ./examples/5test-images-compared.png "5test-images-compared.png"
+[image15]: ./examples/input-image.png "input-image.png"
+[image16]: ./examples/conv1.png "conv1.png"
+[image17]: ./examples/conv2.png "conv2.png"
 
 
 ## Rubric Points
@@ -169,5 +172,13 @@ For the first image, the model is relatively sure that this is a stop sign (prob
 
 ### (Optional) Visualizing the Neural Network (See Step 4 of the Ipython notebook for more details)
 #### 1. Discuss the visual output of your trained network's feature maps. What characteristics did the neural network use to make classifications?
+The input is random selected, the input image is 
+![alt text][image15] 
+
+First convolutional layer's output is
+![alt text][image16] 
+
+Second convolutional layer's output is
+![alt text][image17] 
 
 
